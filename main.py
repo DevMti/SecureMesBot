@@ -70,7 +70,7 @@ async def StartSending(message: types.Message, state: FSMContext):
     # If user joined channel or not
     if joined['status'] != 'left':
         # Check user is in db ot not(add user to db)
-        mycur.execute("SELECT * FROM Users WHERE bot_id='5458175742' AND id='%s'" %link)
+        mycur.execute("SELECT z FROM x WHERE y='%s'" %link)
         myresult = mycur.fetchall()
         
         # If's for sending message
@@ -127,7 +127,7 @@ async def send_welcome(message: types.Message):
     # if user joined channel or not
     if joined['status'] != 'left':
         await message.answer(
-            text='💬 به علت اتفاقات اخیر در کشور عزیزمون متوجه امنیت کم برخی از ربات های ناشناس شدیم\nبه همین خاطر این ربات طراحی شد تا پیام رو از فرستنده به گیرنده بدون هرگونه شنود و وقفه ارسال کنه\nبرای جلب اعتماد شما سورس ربات اوپن شده تا در صورت وجود هرگونه شک به ربات میتونید به شخصه کد هارو مشاهده و برسی کنید.\n\n🌐 @OnTopTM \n🔗 GitHub: LINK',
+            text='💬 به علت اتفاقات اخیر در کشور عزیزمون متوجه امنیت کم برخی از ربات های ناشناس شدیم\nبه همین خاطر این ربات طراحی شد تا پیام رو از فرستنده به گیرنده بدون هرگونه شنود و وقفه ارسال کنه\nبرای جلب اعتماد شما سورس ربات اوپن شده تا در صورت وجود هرگونه شک به ربات میتونید به شخصه کد هارو مشاهده و برسی کنید.\n\n🌐 @OnTopTM \n🔗 GitHub: https://github.com/DevMti/SecureMesBot',
             reply_markup=keyboard_markup
         )
     else:
